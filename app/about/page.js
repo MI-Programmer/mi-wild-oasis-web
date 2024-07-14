@@ -16,13 +16,13 @@ const Page = async () => {
   const numCabins = cabins.length;
 
   return (
-    <div className="grid grid-cols-5 items-center gap-x-24 gap-y-32 text-lg">
-      <div className="col-span-3">
-        <h1 className="mb-10 text-4xl font-medium text-accent-400">
+    <div className="grid grid-cols-5 items-center gap-x-5 gap-y-16 text-sm md:gap-y-32 lg:gap-x-24 lg:text-lg">
+      <div className="col-span-5 md:col-span-3">
+        <h1 className="mb-10 text-3xl font-medium text-accent-400 md:text-4xl">
           Welcome to The Wild Oasis
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-y-8">
           <p>
             Where nature&apos;s beauty and comfortable living blend seamlessly.
             Hidden away in the heart of the Italian Dolomites, this is your
@@ -44,7 +44,7 @@ const Page = async () => {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-5 px-10 md:col-span-2">
         <Image
           src={image1}
           alt="Family sitting around a fire pit in front of cabin"
@@ -53,21 +53,21 @@ const Page = async () => {
         />
       </div>
 
-      <div className="relative col-span-2 aspect-square">
+      <div className="col-span-5 px-10 md:col-span-2">
         <Image
-          src="/about-2.jpg"
-          fill
-          className="object-cover"
+          src={image2}
+          placeholder="blur"
+          quality={80}
           alt="Family that manages The Wild Oasis"
         />
       </div>
 
-      <div className="col-span-3">
-        <h1 className="mb-10 text-4xl font-medium text-accent-400">
+      <div className="col-span-5 md:col-span-3">
+        <h1 className="mb-10 text-3xl font-medium text-accent-400 md:text-4xl">
           Managed by our family since 1962
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-y-8">
           <p>
             Since 1962, The Wild Oasis has been a cherished family-run retreat.
             Started by our grandparents, this haven has been nurtured with love
@@ -86,7 +86,7 @@ const Page = async () => {
           <div>
             <Link
               href="/cabins"
-              className="mt-4 inline-block bg-accent-500 px-8 py-5 text-lg font-semibold text-primary-800 transition-all hover:bg-accent-600"
+              className="mt-4 inline-block bg-accent-500 px-4 py-3 text-sm font-medium text-primary-800 transition-all hover:bg-accent-600 sm:text-base md:px-8 md:py-5 md:text-lg md:font-semibold"
             >
               Explore our luxury cabins
             </Link>

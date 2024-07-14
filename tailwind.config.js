@@ -35,6 +35,11 @@ module.exports = {
           950: "#382814",
         },
       },
+      screens: {
+        xs1: { max: "550px" },
+        xs2: { max: "500px" },
+        xs3: { max: "450px" },
+      },
     },
   },
   plugins: [],

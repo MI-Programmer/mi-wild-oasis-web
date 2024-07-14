@@ -19,7 +19,7 @@ const Page = async () => {
       </h2>
 
       {bookings.length === 0 ? (
-        <p className="text-lg">
+        <p className="text-base sm:text-lg">
           You have no reservations yet. Check out our{" "}
           <Link className="text-accent-500 underline" href="/cabins">
             luxury cabins &rarr;

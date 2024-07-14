@@ -17,10 +17,10 @@ const Page = ({ searchParams }) => {
 
   return (
     <div>
-      <h1 className="mb-5 text-4xl font-medium text-accent-400">
+      <h1 className="mb-5 text-3xl font-medium text-accent-400 md:text-4xl">
         Our Luxury Cabins
       </h1>
-      <p className="mb-10 text-lg text-primary-200">
+      <p className="mb-10 text-sm text-primary-200 lg:text-lg">
         Cozy yet luxurious cabins, located right in the heart of the Italian
         Dolomites. Imagine waking up to beautiful mountain views, spending your
         days exploring the dark forests around, or just relaxing in your private

@@ -28,7 +28,7 @@ const ButtonFilter = ({ children, filter }) => {
 
   return (
     <button
-      className={`px-5 py-2 hover:bg-primary-700 ${activeFilter === filter && "bg-primary-700 text-primary-50"}`}
+      className={`px-2 py-2 text-xs hover:bg-primary-700 sm:px-5 sm:text-sm md:text-base ${activeFilter === filter && "bg-primary-700 text-primary-50"}`}
       onClick={() => handleFilter(filter)}
     >
       {children}

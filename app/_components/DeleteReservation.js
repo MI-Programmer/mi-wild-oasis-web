@@ -16,11 +16,11 @@ const DeleteReservation = ({ bookingId, onDelete }) => {
   return (
     <button
       onClick={handleDelete}
-      className="group flex flex-grow items-center gap-2 px-3 text-xs font-bold uppercase text-primary-300 transition-colors hover:bg-accent-600 hover:text-primary-900"
+      className="group flex flex-grow items-center justify-center gap-2 px-3 py-5 text-xs font-bold uppercase text-primary-300 transition-colors hover:bg-accent-600 hover:text-primary-900 md:justify-start md:py-0"
     >
       {!isPending ? (
         <>
-          <TrashIcon className="h-5 w-5 text-primary-600 transition-colors group-hover:text-primary-800" />
+          <TrashIcon className="h-4 w-4 text-primary-600 transition-colors group-hover:text-primary-800 md:h-5 md:w-5" />
           <span className="mt-1">Delete</span>
         </>
       ) : (

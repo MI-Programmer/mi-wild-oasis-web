@@ -9,7 +9,7 @@ const Page = async () => {
   const firstName = session.user.name.split(" ").at(0);
 
   return (
-    <h2 className="mb-7 text-2xl font-semibold text-accent-400">
+    <h2 className="mb-7 text-lg font-semibold text-accent-400 md:text-2xl">
       Your reservations, {firstName}
     </h2>
   );

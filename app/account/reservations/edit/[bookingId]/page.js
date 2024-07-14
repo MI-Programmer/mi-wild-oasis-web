@@ -8,12 +8,12 @@ const Page = async ({ params: { bookingId } }) => {
 
   return (
     <div>
-      <h2 className="mb-7 text-2xl font-semibold text-accent-400">
+      <h2 className="mb-4 text-xl font-semibold text-accent-400 md:mb-7 md:text-2xl">
         Edit Reservation #{bookingId}
       </h2>
 
       <form
-        className="flex flex-col gap-6 bg-primary-900 px-12 py-8 text-lg"
+        className="flex flex-col gap-5 bg-primary-900 px-6 py-8 text-sm sm:px-12 sm:text-base lg:px-16 lg:text-lg"
         action={updateBooking}
       >
         <input type="hidden" name="bookingId" value={bookingId} />
@@ -23,7 +23,7 @@ const Page = async ({ params: { bookingId } }) => {
           <select
             name="numGuests"
             id="numGuests"
-            className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm"
+            className="w-full rounded-sm bg-primary-200 px-3 py-2 text-primary-800 shadow-sm outline-none sm:px-5 sm:py-3"
             defaultValue={numGuests}
             required
           >
@@ -45,7 +45,7 @@ const Page = async ({ params: { bookingId } }) => {
           <textarea
             name="observations"
             id="observations"
-            className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm"
+            className="w-full rounded-sm bg-primary-200 px-3 py-2 text-primary-800 shadow-sm outline-none sm:px-5 sm:py-3"
             defaultValue={observations}
           />
         </div>

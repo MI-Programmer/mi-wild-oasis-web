@@ -4,7 +4,7 @@ import { differenceInCalendarDays } from "date-fns";
 
 import SubmitButton from "./SubmitButton";
 import { createBooking } from "../_lib/actions";
-import { useReservation } from "./ReservationContext";
+import { useReservation } from "../_contexts/ReservationContext";
 
 function ReservationForm({
   cabin: { maxCapacity, regularPrice, discount, id },
@@ -26,12 +26,11 @@ function ReservationForm({
 
   return (
     <div className="scale-[1.01]">
-      <div className="flex items-center justify-between bg-primary-800 px-16 py-2 text-primary-300">
+      <div className="flex items-center justify-between bg-primary-800 px-6 py-2 text-primary-300 sm:px-12 lg:px-16">
         <p>Logged in as</p>
 
         <div className="flex items-center gap-4">
           <img
-            // Important to display google profile images
             referrerPolicy="no-referrer"
             className="h-8 rounded-full"
             src={user.image}
@@ -42,26 +41,21 @@ function ReservationForm({
       </div>
 
       <form
-        className="flex flex-col gap-5 bg-primary-900 px-16 py-10 text-lg"
+        className="flex flex-col gap-5 bg-primary-900 px-6 py-10 text-sm sm:px-12 sm:text-base lg:px-16 lg:text-lg"
         action={(formData) => {
           createBookingWithData(formData);
           resetRange();
         }}
       >
-        {/* <input
-          type="hidden"
-          name="data"
-          value={JSON.stringify({ ...data, cabinId: id })}
-        /> */}
-
         <div className="space-y-2">
           <label htmlFor="numGuests">How many guests?</label>
           <select
             name="numGuests"
             id="numGuests"
-            className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm"
+            className="w-full rounded-sm bg-primary-200 px-3 py-2 text-primary-800 shadow-sm outline-none sm:px-5 sm:py-3"
             required
           >
+            {" "}
             <option value="" key="">
               Select number of guests...
             </option>
@@ -80,14 +74,14 @@ function ReservationForm({
           <textarea
             name="observations"
             id="observations"
-            className="w-full rounded-sm bg-primary-200 px-5 py-3 text-primary-800 shadow-sm"
+            className="w-full rounded-sm bg-primary-200 px-3 py-2 text-primary-800 shadow-sm outline-none sm:px-5 sm:py-3"
             placeholder="Any pets, allergies, special requirements, etc.?"
           />
         </div>
 
         <div className="flex items-center justify-end gap-6">
           {!(range.from && range.to) ? (
-            <p className="text-base text-primary-300">
+            <p className="text-sm text-primary-300 md:text-base">
               Start by selecting dates
             </p>
           ) : (
